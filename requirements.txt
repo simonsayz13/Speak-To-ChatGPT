@@ -1,0 +1,7 @@
+gTTS==2.3.1
+openai_whisper==20230314
+revChatGPT==4.0.6
+sounddevice==0.4.6
+soundfile==0.12.1
+wavio==0.0.7
+whisper==1.1.10
