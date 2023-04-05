@@ -3,11 +3,14 @@ import wavio as wv
 import time
 import whisper
 from revChatGPT.V3 import Chatbot
-from os import remove
+from os import remove, getenv
 from gtts import gTTS
 import soundfile as sf
 import pyaudio
 import wave
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 def record():
@@ -70,7 +73,7 @@ def play_response(response, lang):
 
 def query_chatgpt():
     chatbot = Chatbot(
-        api_key='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')
+        api_key=getenv("API_KEY"))
     print("You are connected to ChatGPT")
     while True:
         input("\nPress Enter to ask your question!")
